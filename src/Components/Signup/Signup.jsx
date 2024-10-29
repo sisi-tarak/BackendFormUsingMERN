@@ -5,7 +5,7 @@ const Signup = () => {
   return (
     <div className="min-h-screen bg-[#202227] text-[#8692a6] font-poppins p-4">
       <div className="title">
-        <h2>Welcome 👋</h2>
+        <h2>Welcome! Everyone 👋</h2>
         <label htmlFor="headdingtitle">Kindly fill in your details</label>
       </div>
 
