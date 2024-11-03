@@ -6,7 +6,7 @@ const Signup = () => {
     <div className="min-h-screen bg-[#202227] text-[#8692a6] font-poppins p-4">
       <div className="title">
         <h2>Welcome!! 👋</h2>
-        <label htmlFor="headdingtitle">Kindly fill in your details</label>
+        <label htmlFor="headdingtitle">Kindly fill in your details...</label>
       </div>
 
       <div className="bango">
@@ -143,7 +143,7 @@ const Signup = () => {
             </div>
           </div>
 
-          <div className="dix">
+          <div className="dix flex justify-center">
             <div className="col1">
               <div className="cl1">
                 <label htmlFor="Projects">Projects*</label>
@@ -388,18 +388,23 @@ const Signup = () => {
             </div>
           </div>
 
-          <div className="final">
-            <div className="part1">
+          <div className="mt-[30px] flex flex-row ml-[22px] gap-8 justify-center">
+            <div className="flex flex-col gap-2 ">
               <label htmlFor="fileip">Upload Your Resume*</label>
               <input type="file" required id="fileip" />
             </div>
 
-            <div className="part2">
-              <label htmlFor="Agree" className="flex items-center gap-2">
+            <div className="ml-[50px] flex flex-col items-center gap-[10px]">
+              <label
+                htmlFor="Agree"
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input type="checkbox" name="Agree" value="Agree" />I agree and
                 continue
               </label>
-              <button className="subs">Submit</button>
+              <button className="bg-[#0948cf] text-white flex items-center justify-center rounded h-[60px] w-[600px] cursor-pointer hover:bg-[#0736a0] transition-colors duration-300 font-medium ">
+                Submit
+              </button>
             </div>
           </div>
         </div>
