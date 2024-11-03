@@ -39,7 +39,25 @@ const Signup = () => {
         email,
         mobileno,
         address,
+        collegename,
+        rollno,
+        branch,
+        studyyear,
+        academicperformance,
+        streamedfrom,
+        weeklyhours,
+        otherprograms,
+        projects,
+        github,
+        interesteddomain,
+        shortgoal,
+        internships,
+        linkedin,
+        interested,
+        expectation,
+        skills,
         resume,
+        agree,
       })
       .then((result) => {
         console.log(result);
@@ -497,6 +515,7 @@ const Signup = () => {
                     name="Agree"
                     value="Agree"
                     onChange={(e) => setAgree(e.target.value)}
+                    checked
                   />
                   I agree and continue
                 </label>
