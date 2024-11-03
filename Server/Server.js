@@ -17,8 +17,8 @@ app.post("/register", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-  const { name, email } = req.body;
-  mernBackendUsersModal.findOne({ name: name }).then((user) => {
+  const { studentname, email } = req.body;
+  mernBackendUsersModal.findOne({ studentname: studentname }).then((user) => {
     if (user) {
       if (user.email === email) {
         res.json("Success");

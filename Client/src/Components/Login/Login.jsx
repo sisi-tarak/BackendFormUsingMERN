@@ -4,7 +4,7 @@ import axios from "axios";
 import "../Login/Login.css";
 
 const Login = () => {
-  const [name, setName] = useState();
+  const [studentname, setStudentName] = useState();
   const [email, setEmail] = useState();
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3000/login", { name, email })
+      .post("http://localhost:3000/login", { studentname, email })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
@@ -40,7 +40,7 @@ const Login = () => {
                   required
                   placeholder="Enter your name"
                   id="inputs"
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setStudentName(e.target.value)}
                 />
               </div>
 
