@@ -1,14 +1,12 @@
-import React from 'react'
-import Signup from './Components/Signup/Signup'
-import Login from './Components/Login/Login'
+import React from "react";
+import Signup from "./Components/Signup/Signup";
 
 const App = () => {
   return (
     <>
-    <Signup />
-    <Login />
+      <Signup />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

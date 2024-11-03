@@ -1,5 +1,5 @@
 /* FormStyles.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 .title {
   @apply p-5 text-center;
@@ -14,7 +14,7 @@
 }
 
 .bango .modex {
-  @apply mx-5 mt-5 mb-2.5 border-2 border-white border-solid p-1;
+  @apply mx-5 mt-5 mb-2.5 border-2 border-white border-solid py-16 px-5;
 }
 
 .row1 {
@@ -60,14 +60,6 @@
   cursor-pointer focus:ring-2 focus:ring-[#5871eb];
 }
 
-.final {
-  @apply mt-[30px] flex flex-row ml-[22px] gap-8;
-}
-
-.part1 {
-  @apply flex flex-col gap-2;
-}
-
 #fileip {
   @apply bg-[#2b2a2f] h-[4.6rem] w-[600px] text-[#8692a6] border border-[#8692a6] 
   rounded px-[240px] py-[22px] mt-[3px] cursor-pointer 
@@ -76,34 +68,23 @@
   hover:file:bg-[#2a3255] transition-colors duration-300;
 }
 
-.part2 {
-  @apply ml-[50px] flex flex-col items-center gap-[10px];
-}
-
-.part2 label {
-  @apply flex items-center gap-2 cursor-pointer;
-}
-
-.subs {
-  @apply bg-[#0948cf] text-white flex items-center justify-center rounded h-[60px] w-[600px] 
-  cursor-pointer hover:bg-[#0736a0] transition-colors duration-300 font-medium;
-}
-
 /* Responsive Design */
 @media (max-width: 1280px) {
-  .row1, .dix {
+  .row1,
+  .dix {
     @apply flex-wrap justify-start;
   }
-  
+
   .final {
     @apply flex-col items-start;
   }
-  
+
   .part2 {
     @apply ml-0 mt-4;
   }
-  
-  #fileip, .subs {
+
+  #fileip,
+  .subs {
     @apply w-full max-w-[600px];
   }
 }
@@ -112,5 +93,6 @@
   #inputs {
     @apply w-full max-w-[280px];
   }
-  
-  /* .sk1 { */}
+
+  /* .sk1 { */
+}
