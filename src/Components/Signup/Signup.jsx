@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Signup/Signup.css";
+import axios from "axios";
 
 const Signup = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [mobileno, setMobileno] = useState();
+  const [address, setAddress] = useState();
+  const [resume, setResume] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("", { name, email, mobileno, address, resume })
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div className="min-h-screen bg-[#202227] text-[#8692a6] font-poppins p-4">
       <div className="title">
@@ -10,50 +26,55 @@ const Signup = () => {
       </div>
 
       <div className="bango">
-        <div className="modex">
-          <div className="row1">
-            <div className="cl1">
-              <label htmlFor="Name">Name of the Student*</label>
-              <input
-                type="text"
-                required
-                placeholder="Enter your name"
-                id="inputs"
-              />
+        <form action="" onSubmit={handleSubmit}>
+          <div className="modex">
+            <div className="row1">
+              <div className="cl1">
+                <label htmlFor="Name">Name of the Student*</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your name"
+                  id="inputs"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+
+              <div className="cl1">
+                <label htmlFor="Email">Email Address*</label>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter email address"
+                  id="inputs"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div className="cl1">
+                <label htmlFor="Mobile">Mobile number*</label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="Enter Mobile number"
+                  id="inputs"
+                  onChange={(e) => setMobileno(e.target.value)}
+                />
+              </div>
+
+              <div className="cl1">
+                <label htmlFor="Address">Current Address*</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Current Address"
+                  id="inputs"
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </div>
             </div>
 
-            <div className="cl1">
-              <label htmlFor="Email">Email Address*</label>
-              <input
-                type="email"
-                required
-                placeholder="Enter email address"
-                id="inputs"
-              />
-            </div>
-
-            <div className="cl1">
-              <label htmlFor="Mobile">Mobile number*</label>
-              <input
-                type="tel"
-                required
-                placeholder="Enter Mobile number"
-                id="inputs"
-              />
-            </div>
-
-            <div className="cl1">
-              <label htmlFor="Address">Current Address*</label>
-              <input
-                type="text"
-                required
-                placeholder="Enter Current Address"
-                id="inputs"
-              />
-            </div>
-          </div>
-
-          <div className="row1">
+            {/* <div className="row1">
             <div className="cl1">
               <label htmlFor="College">Name of the College*</label>
               <input
@@ -272,7 +293,7 @@ const Signup = () => {
                   </label>
                 </div>
 
-                {/* Backend Skills */}
+               
                 <div className="sk1">
                   <label htmlFor="NodeJS">
                     <input type="checkbox" name="NodeJS" value="NodeJS" />
@@ -386,28 +407,34 @@ const Signup = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="mt-[30px] flex flex-row ml-[22px] gap-8 justify-center">
-            <div className="flex flex-col gap-2 ">
-              <label htmlFor="fileip">Upload Your Resume*</label>
-              <input type="file" required id="fileip" />
-            </div>
+            <div className="mt-[30px] flex flex-row ml-[22px] gap-8 justify-center">
+              <div className="flex flex-col gap-2 ">
+                <label htmlFor="fileip">Upload Your Resume*</label>
+                <input
+                  type="file"
+                  required
+                  id="fileip"
+                  onChange={(e) => setResume(e.target.value)}
+                />
+              </div>
 
-            <div className="ml-[50px] flex flex-col items-center gap-[10px]">
-              <label
-                htmlFor="Agree"
-                className="flex items-center gap-2 cursor-pointer"
-              >
-                <input type="checkbox" name="Agree" value="Agree" />I agree and
-                continue
-              </label>
-              <button className="bg-[#0948cf] text-white flex items-center justify-center rounded h-[60px] w-[600px] cursor-pointer hover:bg-[#0736a0] transition-colors duration-300 font-medium ">
-                Submit
-              </button>
+              <div className="ml-[50px] flex flex-col items-center gap-[10px]">
+                {/* <label
+                  htmlFor="Agree"
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input type="checkbox" name="Agree" value="Agree" />I agree
+                  and continue
+                </label> */}
+                <button className="bg-[#0948cf] text-white flex items-center justify-center rounded h-[60px] w-[600px] cursor-pointer hover:bg-[#0736a0] transition-colors duration-300 font-medium ">
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
